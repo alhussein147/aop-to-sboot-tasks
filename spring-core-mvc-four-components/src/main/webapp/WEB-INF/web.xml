@@ -1,0 +1,25 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<!-- added xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="4.0" to web-app, as EL values didn't render-->
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="4.0">
+  <display-name>Archetype Created Web Application</display-name>
+
+  <!-- The only servlet. With no <init-param>, it loads /WEB-INF/{servlet-name}-servlet.xml,
+      i.e. /WEB-INF/dispatcher-servlet.xml. There is no ContextLoaderListener and no
+      root context: that one XML file is the whole application context. -->
+  <servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+
+</web-app>
